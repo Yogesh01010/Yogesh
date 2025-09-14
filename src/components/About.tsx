@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
-import { Code, Hourglass, Users, Award } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { motion } from 'framer-motion';
+import { Code, Coffee, Users, Award } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 
 const About = () => {
   const stats = [
     { icon: Code, label: "Projects & Mini-Apps Built", value: "10+" },
-    { icon: Hourglass, label: "Hours of Coding Practice", value: "3000+" },
-    { icon: Users, label: "GitHub Contributions", value: "50+" },
-    { icon: Award, label: "Courses & Certifications", value: "3+" },
+  { icon: Coffee, label: "Hours of Coding Practice", value: "3000+" },
+  { icon: Users, label: "GitHub Contributions", value: "50+" },
+  { icon: Award, label: "Courses & Certifications", value: "3+" },
   ];
 
   const containerVariants = {
@@ -59,29 +59,26 @@ const About = () => {
               variants={itemVariants}
               className="text-lg text-muted-foreground leading-relaxed"
             >
-              I'm a passionate Full Stack Developer with expertise in modern web
-              technologies. I love creating digital experiences that are not
-              only visually appealing but also highly functional and
-              user-friendly.
+              I'm a passionate Full Stack Developer with expertise in modern web technologies. 
+              I love creating digital experiences that are not only visually appealing but also 
+              highly functional and user-friendly.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-lg text-muted-foreground leading-relaxed"
             >
-              With a strong foundation in both frontend and backend development,
-              I enjoy working on challenging projects that push the boundaries
-              of what's possible on the web. I'm always eager to learn new
-              technologies and apply them to create innovative solutions.
+              With a strong foundation in both frontend and backend development, I enjoy working 
+              on challenging projects that push the boundaries of what's possible on the web. 
+              I'm always eager to learn new technologies and apply them to create innovative solutions.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-lg text-muted-foreground leading-relaxed"
             >
-              When I'm not coding, you can find me exploring new frameworks,
-              contributing to open-source projects, or sharing my knowledge with
-              the developer community.
+              When I'm not coding, you can find me exploring new frameworks, contributing to 
+              open-source projects, or sharing my knowledge with the developer community.
             </motion.p>
 
             <motion.div variants={itemVariants} className="pt-4">

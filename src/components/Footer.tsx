@@ -1,47 +1,47 @@
-import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Phone, Heart, Briefcase } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Github, Linkedin, Mail, Phone, Heart } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/Yogesh01010",
-      label: "GitHub",
-      color: "hover:text-gray-400",
+      href: 'https://github.com/Yogesh01010',
+      label: 'GitHub',
+      color: 'hover:text-gray-400'
     },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/yogeshsharma1010/",
-      label: "LinkedIn",
-      color: "hover:text-blue-400",
+      href: 'https://www.linkedin.com/in/yogeshsharma1010/',
+      label: 'LinkedIn',
+      color: 'hover:text-blue-400'
     },
     {
       icon: Mail,
-      href: "mailto:yogeshsharm26879@gmail.com",
-      label: "Email",
-      color: "hover:text-red-400",
+      href: 'mailto:yogeshsharm26879@gmail.com',
+      label: 'Email',
+      color: 'hover:text-red-400'
     },
     {
       icon: Phone,
-      href: "tel:+918208945238",
-      label: "Phone",
-      color: "hover:text-green-400",
-    },
+      href: 'tel:+918208945238',
+      label: 'Phone',
+      color: 'hover:text-green-400'
+    }
   ];
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   const scrollToSection = (href: string) => {
     const elementId = href.substring(1);
     const element = document.getElementById(elementId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -51,7 +51,7 @@ const Footer = () => {
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
       </div>
-
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Main Footer Content */}
         <div className="py-16 grid md:grid-cols-3 gap-12">
@@ -68,11 +68,11 @@ const Footer = () => {
                 Yogesh Sharma
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Full Stack Developer passionate about creating beautiful,
+                Full Stack Developer passionate about creating beautiful, 
                 functional applications that make a difference.
               </p>
             </div>
-
+            
             <div className="flex space-x-4">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
@@ -155,9 +155,8 @@ const Footer = () => {
               transition={{ delay: 0.8 }}
               className="mt-8 p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10"
             >
-              <p className="text-sm text-gray-300 flex items-center gap-2">
-                <Briefcase className="w-4 h-4 text-primary" />
-                Available for freelance work and full-time opportunities
+              <p className="text-sm text-gray-300">
+                💼 Available for freelance work and full-time opportunities
               </p>
             </motion.div>
           </motion.div>

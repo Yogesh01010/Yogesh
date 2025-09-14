@@ -1,67 +1,56 @@
-import { motion } from "framer-motion";
-import { Github, ExternalLink, Code } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { motion } from 'framer-motion';
+import { Github, ExternalLink, Code } from 'lucide-react';
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Food App",
-      description:
-        "A modern food delivery application built with React Native featuring real-time ordering, user authentication, and seamless payment integration.",
-      techStack: ["React Native", "JavaScript", "Mobile Development"],
-      github: "https://github.com/Yogesh01010/Food_App.git",
+      title: 'Food App',
+      description: 'A modern food delivery application built with React Native featuring real-time ordering, user authentication, and seamless payment integration.',
+      techStack: ['React Native', 'JavaScript', 'Mobile Development'],
+      github: 'https://github.com/Yogesh01010/Food_App.git',
       demo: null,
-      image:
-        "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=300&fit=crop",
-      gradient: "from-gray-700 to-black",
+      image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=300&fit=crop',
+      gradient: 'from-orange-400 to-red-500'
     },
     {
-      title: "Library Management System",
-      description:
-        "A comprehensive library management application with book cataloging, member management, and automated fine calculation systems.",
-      techStack: ["HTML", "CSS", "JavaScript", "Web Development"],
-      github:
-        "https://github.com/Yogesh01010/Library-Management-System-Application.git",
-      demo: "https://library-management-system-application.netlify.app/",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop",
-      gradient: "from-gray-700 to-black",
+      title: 'Library Management System',
+      description: 'A comprehensive library management application with book cataloging, member management, and automated fine calculation systems.',
+      techStack: ['HTML', 'CSS', 'JavaScript', 'Web Development'],
+      github: 'https://github.com/Yogesh01010/Library-Management-System-Application.git',
+      demo: 'https://library-management-system-application.netlify.app/',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop',
+      gradient: 'from-blue-400 to-purple-500'
     },
     {
-      title: "Birthday Website",
-      description:
-        "An interactive and personalized birthday celebration website with animations, photo galleries, and custom messaging features.",
-      techStack: ["React", "TypeScript", "Animation"],
-      github: "https://github.com/Yogesh01010/Birthday-site.git",
-      demo: "https://6861796ffbb8c121341f9dfa--iktara.netlify.app/",
-      image:
-        "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=500&h=300&fit=crop",
-      gradient: "from-gray-700 to-black",
+      title: 'Birthday Website',
+      description: 'An interactive and personalized birthday celebration website with animations, photo galleries, and custom messaging features.',
+      techStack: ['React', 'TypeScript', 'Animation'],
+      github: 'https://github.com/Yogesh01010/Birthday-site.git',
+      demo: 'https://6861796ffbb8c121341f9dfa--iktara.netlify.app/',
+      image: 'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=500&h=300&fit=crop',
+      gradient: 'from-pink-400 to-purple-500'
     },
     {
-      title: "Nike Store",
-      description:
-        "A sleek e-commerce store interface inspired by Nike's design language, featuring product showcases and interactive shopping experience.",
-      techStack: ["HTML", "CSS", "JavaScript", "E-commerce"],
-      github: "https://github.com/Yogesh01010/Nike_Sotre.git",
-      demo: "https://master--frolicking-quokka-3d5cca.netlify.app/",
-      image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=300&fit=crop",
-      gradient: "from-gray-700 to-black",
+      title: 'Nike Store',
+      description: 'A sleek e-commerce store interface inspired by Nike\'s design language, featuring product showcases and interactive shopping experience.',
+      techStack: ['HTML', 'CSS', 'JavaScript', 'E-commerce'],
+      github: 'https://github.com/Yogesh01010/Nike_Sotre.git',
+      demo: 'https://master--frolicking-quokka-3d5cca.netlify.app/',
+      image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=300&fit=crop',
+      gradient: 'from-gray-700 to-black'
     },
     {
-      title: "E-commerce Website",
-      description:
-        "A full-stack e-commerce platform with user authentication, product management, shopping cart, and secure payment processing.",
-      techStack: ["MongoDB", "Express", "React", "Node.js"],
-      github: "https://github.com/Yogesh01010/ecommerce_v1.git",
-      demo: "https://master--frolicking-quokka-3d5cca.netlify.app/",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      gradient: "from-gray-700 to-black",
-    },
+      title: 'E-commerce Website',
+      description: 'A full-stack e-commerce platform with user authentication, product management, shopping cart, and secure payment processing.',
+      techStack: ['MongoDB', 'Express', 'React', 'Node.js'],
+      github: 'https://github.com/Yogesh01010/ecommerce_v1.git',
+      demo: 'https://master--frolicking-quokka-3d5cca.netlify.app/',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
+      gradient: 'from-green-400 to-blue-500'
+    }
   ];
 
   const containerVariants = {
@@ -98,8 +87,8 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are some of the projects I've worked on recently. Each project
-            represents a unique challenge and learning experience.
+            Here are some of the projects I've worked on recently. Each project represents 
+            a unique challenge and learning experience.
           </p>
         </motion.div>
 
@@ -119,7 +108,7 @@ const Projects = () => {
             >
               <Card className="overflow-hidden h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:shadow-glow transition-all duration-500">
                 {/* Project Image */}
-                <div className="relative overflow-hidden group">
+                <div className="relative overflow-hidden">
                   <motion.img
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.4 }}
@@ -127,13 +116,17 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-48 object-cover"
                   />
-
-                  {/* Overlay */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center`}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80 flex items-center justify-center`}
                   >
-                    {/* Buttons */}
-                    <div className="flex space-x-4 opacity-0 group-hover:opacity-100 transform group-hover:scale-100 scale-90 transition-all duration-300">
+                    <motion.div
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      whileHover={{ scale: 1, opacity: 1 }}
+                      transition={{ delay: 0.1 }}
+                      className="flex space-x-4"
+                    >
                       <Button
                         size="sm"
                         variant="secondary"
@@ -149,7 +142,6 @@ const Projects = () => {
                           <Github className="h-4 w-4" />
                         </a>
                       </Button>
-
                       {project.demo && (
                         <Button
                           size="sm"
@@ -167,8 +159,8 @@ const Projects = () => {
                           </a>
                         </Button>
                       )}
-                    </div>
-                  </div>
+                    </motion.div>
+                  </motion.div>
                 </div>
 
                 {/* Project Content */}

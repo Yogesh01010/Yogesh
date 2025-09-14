@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Send, Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import emailjs from "emailjs-com";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Send, Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -20,28 +20,28 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
-      value: "yogeshsharm26879@gmail.com",
-      href: "mailto:yogeshsharm26879@gmail.com",
+      label: 'Email',
+      value: 'yogeshsharm26879@gmail.com',
+      href: 'mailto:yogeshsharm26879@gmail.com'
     },
     {
       icon: Phone,
-      label: "Phone",
-      value: "+91 8208945238",
-      href: "tel:+918208945238",
+      label: 'Phone',
+      value: '+91 8208945238',
+      href: 'tel:+918208945238'
     },
     {
       icon: Github,
-      label: "GitHub",
-      value: "github.com/Yogesh01010",
-      href: "https://github.com/Yogesh01010",
+      label: 'GitHub',
+      value: 'github.com/Yogesh01010',
+      href: 'https://github.com/Yogesh01010'
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/yogeshsharma1010",
-      href: "https://www.linkedin.com/in/yogeshsharma1010/",
-    },
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/yogeshsharma1010',
+      href: 'https://www.linkedin.com/in/yogeshsharma1010/'
+    }
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -50,27 +50,27 @@ const Contact = () => {
 
     try {
       // EmailJS configuration - You need to replace these with your actual EmailJS credentials
-      const serviceId = "service_7khahuc"; // Replace with your EmailJS service ID
-      const templateId = "template_a63cd7j"; // Replace with your EmailJS template ID
-      const userId = "cZIvbjST3qN5wT_wD"; // Replace with your EmailJS user ID
+      const serviceId = 'service_7khahuc'; // Replace with your EmailJS service ID
+      const templateId = 'template_a63cd7j'; // Replace with your EmailJS template ID
+      const userId = 'cZIvbjST3qN5wT_wD'; // Replace with your EmailJS user ID
 
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: "yogeshsharm26879@gmail.com",
+        to_email: 'yogeshsharm26879@gmail.com'
       };
 
       await emailjs.send(serviceId, templateId, templateParams, userId);
-
+      
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon!",
       });
-
-      setFormData({ name: "", email: "", message: "" });
+      
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error('EmailJS Error:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again later.",
@@ -81,12 +81,10 @@ const Contact = () => {
     }
   };
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     }));
   };
 
@@ -124,8 +122,8 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities and interesting
-            projects. Let's connect and create something amazing together!
+            I'm always open to discussing new opportunities and interesting projects. 
+            Let's connect and create something amazing together!
           </p>
         </motion.div>
 
@@ -143,8 +141,8 @@ const Contact = () => {
                 Let's Talk
               </h3>
               <p className="text-muted-foreground mb-8">
-                Feel free to reach out through any of the following channels. I
-                typically respond within 24 hours.
+                Feel free to reach out through any of the following channels. 
+                I typically respond within 24 hours.
               </p>
             </div>
 
@@ -198,7 +196,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Send Message
               </h3>
-
+              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -212,7 +210,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="bg-background/50 focus:ring-none transition-colors"
+                    className="bg-background/50 border-border/50 focus:border-primary/50 transition-colors"
                   />
                 </motion.div>
 
@@ -228,7 +226,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="bg-background/50 border-border/50 focus:ring-none transition-colors"
+                    className="bg-background/50 border-border/50 focus:border-primary/50 transition-colors"
                   />
                 </motion.div>
 
@@ -244,7 +242,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="bg-background/50 border-border/50 focus:ring-none transition-colors resize-none"
+                    className="bg-background/50 border-border/50 focus:border-primary/50 transition-colors resize-none"
                   />
                 </motion.div>
 
@@ -262,11 +260,7 @@ const Contact = () => {
                     {isSubmitting ? (
                       <motion.div
                         animate={{ rotate: 360 }}
-                        transition={{
-                          duration: 1,
-                          repeat: Infinity,
-                          ease: "linear",
-                        }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                         className="h-4 w-4 border-2 border-white border-t-transparent rounded-full"
                       />
                     ) : (
