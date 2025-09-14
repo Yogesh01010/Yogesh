@@ -85,6 +85,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
+              className="mt-20 md:mt-0"
             >
               <h2 className="text-lg text-primary font-medium mb-2">
                 Hello, I'm
