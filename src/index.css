@@ -35,19 +35,34 @@
     --ring: 234 89% 74%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(234 89% 74%) 0%, hsl(270 100% 86%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(234 89% 96%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(222.2 84% 4.9%) 0%, hsl(234 50% 20%) 100%);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(234 89% 74%) 0%,
+      hsl(270 100% 86%) 100%
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(210 40% 98%) 0%,
+      hsl(234 89% 96%) 100%
+    );
+    --gradient-dark: linear-gradient(
+      135deg,
+      hsl(222.2 84% 4.9%) 0%,
+      hsl(234 50% 20%) 100%
+    );
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-glow: 0 0 40px hsl(234 89% 74% / 0.3);
 
     /* Animations */
     --transition-all: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-colors: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-colors: color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.75rem;
 
@@ -98,14 +113,28 @@
     --ring: 234 89% 74%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(234 89% 74%) 0%, hsl(270 100% 86%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(220 27% 18%) 0%, hsl(234 50% 20%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(222.2 84% 4.9%) 0%, hsl(234 50% 8%) 100%);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(234 89% 74%) 0%,
+      hsl(270 100% 86%) 100%
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(220 27% 18%) 0%,
+      hsl(234 50% 20%) 100%
+    );
+    --gradient-dark: linear-gradient(
+      135deg,
+      hsl(222.2 84% 4.9%) 0%,
+      hsl(234 50% 8%) 100%
+    );
 
     /* Shadows - Enhanced for dark theme */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3),
+      0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3),
+      0 4px 6px -4px rgb(0 0 0 / 0.3);
     --shadow-glow: 0 0 40px hsl(234 89% 74% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -134,11 +163,11 @@
   .bg-gradient-primary {
     background: var(--gradient-primary);
   }
-  
+
   .bg-gradient-secondary {
     background: var(--gradient-secondary);
   }
-  
+
   .bg-gradient-dark {
     background: var(--gradient-dark);
   }
@@ -152,7 +181,7 @@
   .transition-all {
     transition: var(--transition-all);
   }
-  
+
   .transition-colors {
     transition: var(--transition-colors);
   }
@@ -161,7 +190,7 @@
   .hover-lift:hover {
     transform: translateY(-4px);
   }
-  
+
   .hover-glow:hover {
     box-shadow: var(--shadow-glow);
   }
@@ -173,4 +202,9 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+::selection {
+  color: #ccb1fd;
+  background-color: #020817;
 }
