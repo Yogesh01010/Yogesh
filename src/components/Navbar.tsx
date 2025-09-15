@@ -50,7 +50,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed h-400 top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-[hsl(222,84%,5%)] backdrop-blur-lg shadow-lg"
           : "bg-transparent"
@@ -61,10 +61,10 @@ const Navbar = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-xl font-bold text-gradient cursor-pointer"
+            className="text-4xl font-bold text-gradient cursor-pointer"
             onClick={() => scrollToSection("home")}
           >
-            Yogesh
+            Portfolio
           </motion.div>
 
           {/* Desktop Navigation */}

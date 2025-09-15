@@ -39,6 +39,14 @@ const Hero = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <section
       id="home"
@@ -137,22 +145,30 @@ const Hero = () => {
               })}
             </motion.div>
 
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="pt-4"
-            >
+            <motion.div variants={itemVariants} className="pt-4 flex space-x-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+              >
+                <a
+                  href="/Yogesh-Sharma-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Resume
+                </a>
+              </Button>
+
               <Button
                 asChild
                 size="lg"
                 className="bg-gradient-primary text-black hover:shadow-glow transition-all duration-300"
               >
                 <a
-                  href="https://drive.google.com/file/d/1cRTVgYPS97THaG5B3Y9s_yGCPiHZe4F4/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/Yogesh-Sharma-Resume.pdf"
+                  download="Yogesh-Sharma-Resume.pdf"
+                  className="inline-flex items-center px-6 py-3 rounded-lg"
                 >
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
@@ -227,6 +243,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
+                className="mt-4 md:mt-0"
               >
                 <h2 className="text-base sm:text-lg text-primary font-medium mb-2">
                   Hello, I'm
@@ -253,12 +270,12 @@ const Hero = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right side - Social links and button */}
+            {/* Right side - Social links and buttons */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="flex flex-col items-center md:items-start space-y-6 md:min-w-[200px]"
+              className="flex flex-col items-center md:items-start space-y-6 md:min-w-[220px]"
             >
               {/* Social Links */}
               <motion.div
@@ -286,21 +303,34 @@ const Hero = () => {
                 })}
               </motion.div>
 
-              {/* CTA Button */}
+              {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
+                variants={itemVariants}
+                className="flex flex-col space-y-3 w-full"
               >
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-primary text-black hover:shadow-glow transition-all duration-300 text-sm sm:text-base px-6 py-2.5"
+                  className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-sm px-6 py-2.5 w-full"
                 >
                   <a
-                    href="https://drive.google.com/file/d/1cRTVgYPS97THaG5B3Y9s_yGCPiHZe4F4/view?usp=sharing"
+                    href="/Yogesh-Sharma-Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
+                  >
+                    View Resume
+                  </a>
+                </Button>
+
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-primary text-black hover:shadow-glow transition-all duration-300 text-sm px-6 py-2.5 w-full"
+                >
+                  <a
+                    href="/Yogesh-Sharma-Resume.pdf"
+                    download="Yogesh-Sharma-Resume.pdf"
+                    className="inline-flex items-center justify-center"
                   >
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
@@ -318,7 +348,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
         onClick={scrollToNext}
-        className="absolute bottom-6 hidden sm:block left-1/2 transform -translate-x-1/2"
+        className="absolute hidden sm:block bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

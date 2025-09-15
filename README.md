@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 🚀 About Me
 
 Hi, I'm Yogesh Sharma – a passionate Full-Stack Developer who loves building interactive and scalable web applications.
@@ -35,6 +34,4 @@ LinkedIn: linkedin.com/in/yogesh-sharma
 GitHub: github.com/Yogesh01010
 
 Email: yogesh@example.com
-=======
 
->>>>>>> c4de14e (Hero Section resposive fix)

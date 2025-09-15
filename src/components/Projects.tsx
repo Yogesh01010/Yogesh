@@ -3,6 +3,10 @@ import { Github, ExternalLink, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import birthday from "../assets/birthday.jpg";
+import library from "../assets/library.jpg";
+import nikeStore from "../assets/nike-store.jpg";
+import ecommerce from "../assets/ecommerce.jpg";
 
 const Projects = () => {
   const projects = [
@@ -25,8 +29,7 @@ const Projects = () => {
       github:
         "https://github.com/Yogesh01010/Library-Management-System-Application.git",
       demo: "https://library-management-system-application.netlify.app/",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop",
+      image: library,
       gradient: "from-gray-700 to-black",
     },
     {
@@ -36,8 +39,7 @@ const Projects = () => {
       techStack: ["React", "TypeScript", "Animation"],
       github: "https://github.com/Yogesh01010/Birthday-site.git",
       demo: "https://6861796ffbb8c121341f9dfa--iktara.netlify.app/",
-      image:
-        "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=500&h=300&fit=crop",
+      image: birthday,
       gradient: "from-gray-700 to-black",
     },
     {
@@ -47,8 +49,7 @@ const Projects = () => {
       techStack: ["HTML", "CSS", "JavaScript", "E-commerce"],
       github: "https://github.com/Yogesh01010/Nike_Sotre.git",
       demo: "https://master--frolicking-quokka-3d5cca.netlify.app/",
-      image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=300&fit=crop",
+      image: nikeStore,
       gradient: "from-gray-700 to-black",
     },
     {
@@ -58,8 +59,7 @@ const Projects = () => {
       techStack: ["MongoDB", "Express", "React", "Node.js"],
       github: "https://github.com/Yogesh01010/ecommerce_v1.git",
       demo: "https://master--frolicking-quokka-3d5cca.netlify.app/",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+      image: ecommerce,
       gradient: "from-gray-700 to-black",
     },
   ];

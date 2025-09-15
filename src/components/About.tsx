@@ -84,21 +84,21 @@ const About = () => {
               the developer community.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="pt-4">
+          {/* <motion.div variants={itemVariants} className="pt-4">
               <Button
                 asChild
                 size="lg"
                 className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
               >
                 <a
-                  href="https://drive.google.com/file/d/1cRTVgYPS97THaG5B3Y9s_yGCPiHZe4F4/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1aXq_XSM3_7j7aSQ-AP--gfUoWFiCZ9bt/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   View Resume
                 </a>
               </Button>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Stats Grid */}
