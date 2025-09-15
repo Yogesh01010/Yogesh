@@ -1,1 +1,2 @@
-
+Portfolio
+I’m Yogesh Sharma, a passionate full-stack developer with a strong foundation in building responsive, user-friendly web applications. Skilled in JavaScript, React, Node.js (or whatever your stack is), I love translating design mockups into clean, maintainable code. Always learning, always pushing for performance, and committed to writing code that’s not just functional, but elegant and scalable.
