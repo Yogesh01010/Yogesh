@@ -91,7 +91,7 @@ const About = () => {
                 className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
               >
                 <a
-                  href="https://drive.google.com/file/d/1cRTVgYPS97THaG5B3Y9s_yGCPiHZe4F4/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1aXq_XSM3_7j7aSQ-AP--gfUoWFiCZ9bt/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
